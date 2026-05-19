@@ -37,6 +37,12 @@ def main():
                         default=False,
                         type=bool)
 
+    parser.add_argument("-d", "--dbversion",
+                        required=False,
+                        help="IPD-IMGT/HLA db version",
+                        default='3290',
+                        type=str)
+
     parser.add_argument("-v", "--verbose",
                         help="Option for running in verbose",
                         action='store_true')
@@ -67,7 +73,7 @@ def main():
                                               host=biosqldb_host, port=biosqldb_port,
                                               db=biosqldb_name)
 
-    seqann = BioSeqAnn(verbose=verbose, server=server, kir=kir)
+    seqann = BioSeqAnn(verbose=verbose, server=server, kir=kir, dbversion=args.dbversion)
 
     gfe_maker = gfe.GFE()
     for seq in SeqIO.parse(fasta_file, "fasta"):

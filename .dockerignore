@@ -1,2 +1,9 @@
 *
-!Dockerfile
+!py-gfe/Dockerfile
+!py-gfe/requirements.txt
+!py-gfe/setup.py
+!py-gfe/pygfe/
+!py-gfe/scripts/
+!py-gfe/README.rst
+!py-gfe/HISTORY.rst
+!seq-ann/
