@@ -105,3 +105,4 @@ misc/
 .mypy_cache/
 
 tags
+input/
